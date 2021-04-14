@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:layout_marginTop="160dp"
+    android:id="@+id/addLocationScroll">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/addLocationConstraint">
+
+
+        <TextView
+            android:id="@+id/addLocationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="45dp"
+            android:text="Add Exhibit"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="175dp"
+            android:layout_marginTop="22dp"
+            android:width="600dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/addLocationLabel"
+            app:layout_constraintTop_toBottomOf="@+id/addLocationLabel" />
+
+
+
+
+        <Button
+            android:id="@+id/addLocationButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="200dp"
+            android:layout_height="42dp"
+
+            android:layout_marginTop="20dp"
+            android:width="200dp"
+            android:height="50dp"
+            android:background="@drawable/button_green"
+            android:text="Add Exhibit"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="@+id/locationButton"
+            app:layout_constraintTop_toBottomOf="@+id/locationButton" />
+
+        <Button
+            android:id="@+id/CancelButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="8dp"
+            android:width="200dp"
+            android:height="50dp"
+            android:background="@drawable/button_green"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="#1d90fd"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="@+id/addLocationButton"
+            app:layout_constraintStart_toEndOf="@+id/addLocationButton"
+            app:layout_constraintTop_toTopOf="@+id/addLocationButton"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Title"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/addLocationLabel"
+            app:layout_constraintTop_toTopOf="@+id/titleEditText" />
+
+
+
+        <TextView
+            android:id="@+id/floorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Description"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/addLocationLabel"
+            app:layout_constraintTop_toTopOf="@+id/floorEditText" />
+
+
+        <TextView
+            android:id="@+id/availabilityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Availability"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/addLocationLabel"
+            tools:layout_editor_absoluteY="699dp" />
+
+        <TextView
+            android:id="@+id/tenantTitleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Location"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/addLocationLabel"
+            app:layout_constraintTop_toTopOf="@+id/locationButton" />
+
+
+
+        <Button
+            android:id="@+id/locationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Set Location"
+            app:layout_constraintStart_toStartOf="@+id/availabilitySwitch"
+            app:layout_constraintTop_toBottomOf="@+id/availabilitySwitch" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

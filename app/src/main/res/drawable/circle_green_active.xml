@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="oval" >
+        <!-- View background color -->
+        <solid
+            android:color="#5cc859" >
+        </solid>
+        <size
+            android:width="150dp"
+            android:height="150dp"/>
+    </shape>
+</item>
+<item
+    android:left="30dp"
+    android:right="30dp"
+    android:top="30dp"
+    android:bottom="30dp"
+
+    android:drawable="@drawable/ic_check" />
+
+</layer-list>

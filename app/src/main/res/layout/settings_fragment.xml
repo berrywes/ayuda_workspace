@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:padding="20dp">
+
+
+        <TextView
+            android:id="@+id/updateLabel"
+            android:layout_width="700sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Update Profile"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/zxing_status_text"
+            android:textSize="44sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="450dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_bottom_line"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:drawablePadding="5dp"
+            android:fontFamily="sans-serif-light"
+            android:hint="email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/zxing_status_text"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="450dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_bottom_line"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:drawablePadding="5dp"
+            android:fontFamily="sans-serif-light"
+            android:hint="name"
+
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/zxing_status_text"
+            android:textColorHint="@color/zxing_status_text"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/updateLabel"
+            app:layout_constraintStart_toStartOf="@+id/updateLabel"
+            app:layout_constraintTop_toBottomOf="@+id/updateLabel" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+
+            android:background="@drawable/button_green"
+            android:fontFamily="sans-serif-light"
+            android:text="Save "
+            android:textAllCaps="false"
+            android:textColor="@color/zxing_status_text"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
+            app:layout_constraintStart_toStartOf="@+id/editTextEmail"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="500sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Change Password"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/zxing_status_text"
+
+            android:textSize="44sp"
+            app:layout_constraintEnd_toEndOf="@+id/buttonSave"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="@+id/buttonSave"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSave" />
+
+        <EditText
+            android:id="@+id/editTextCurrentPassword"
+            android:layout_width="450dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_bottom_line"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:drawablePadding="5dp"
+            android:fontFamily="sans-serif-light"
+            android:hint="current password"
+            android:inputType="textPassword"
+
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/zxing_status_text"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNewPassword" />
+
+        <EditText
+            android:id="@+id/editTextNewPassword"
+            android:layout_width="450dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edittext_bottom_line"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:drawablePadding="5dp"
+            android:fontFamily="sans-serif-light"
+
+            android:hint="new password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/zxing_status_text"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/buttonChangePassword"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_green"
+
+            android:fontFamily="sans-serif-light"
+            android:text="Change Password"
+            android:textAllCaps="false"
+            android:textColor="@color/zxing_status_text"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextCurrentPassword"
+            app:layout_constraintStart_toStartOf="@+id/editTextCurrentPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCurrentPassword" />
+
+        <Button
+            android:id="@+id/buttonLogout"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_red"
+            android:fontFamily="sans-serif-light"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:textColor="@color/zxing_status_text"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_red"
+            android:fontFamily="sans-serif-light"
+            android:text="Delete Profile"
+            android:textAllCaps="false"
+            android:textColor="@color/zxing_status_text"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/clearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="50dp"
+            android:background="@null"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/button_back_arrow" />
+
+
+</android.support.constraint.ConstraintLayout>

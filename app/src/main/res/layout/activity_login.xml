@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/colorPrimary"
+    tools:context=".activities.LoginActivity">
+
+
+    <TextView
+        android:id="@+id/logoTitle"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="1000dp"
+        android:fontFamily="@font/open_sans"
+        android:text="ayuda"
+        android:textColor="#FFFFFF"
+        android:textSize="75sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.965"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/SignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmail"
+        app:layout_constraintTop_toBottomOf="@+id/logoTitle" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="750dp"
+
+        android:layout_height="70dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:width="350sp"
+        android:background="@color/zxing_status_text"
+
+        android:ems="10"
+        android:fontFamily="@font/open_sans"
+        android:hint="Email"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:paddingBottom="5dp"
+        android:singleLine="true"
+        android:textColorLink="@color/colorPrimary"
+        android:textSize="27sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignUp" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="750dp"
+        android:layout_height="70dp"
+
+        android:layout_marginTop="12dp"
+        android:width="350sp"
+        android:background="@color/zxing_status_text"
+        android:ems="10"
+        android:fontFamily="@font/open_sans"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:paddingBottom="5dp"
+        android:singleLine="true"
+        android:textColorLink="@color/colorPrimary"
+        android:textSize="27sp"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+    <TextView
+        android:id="@+id/alreadyHave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Don't have an account?"
+        android:textColor="#FFFFFF"
+        android:textSize="21sp"
+        app:layout_constraintStart_toEndOf="@+id/buttonLogin"
+        app:layout_constraintTop_toTopOf="@+id/buttonLogin" />
+
+    <TextView
+        android:id="@+id/textViewRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Click here to register"
+
+        android:textColor="#FFFFFF"
+        android:textSize="21sp"
+        app:layout_constraintStart_toStartOf="@+id/alreadyHave"
+        app:layout_constraintTop_toBottomOf="@+id/alreadyHave" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="400dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="32dp"
+
+        android:width="250sp"
+        android:background="@color/zxing_status_text"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="Login"
+        android:textColor="@color/colorButton"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+</android.support.constraint.ConstraintLayout>

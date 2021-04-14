@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:layout_marginTop="0dp"
+    android:id="@+id/addLocationScroll">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/addLocationConstraint"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/colorPrimary">
+
+
+        <TextView
+            android:id="@+id/addLocationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="88dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Add Location"
+            android:textColor="@color/zxing_status_text"
+            android:textSize="44sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.117"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="500dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="64dp"
+            android:width="600dp"
+            android:background="@drawable/edittext_bottom_line"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/green"
+            android:textColorHighlight="@color/green"
+            android:textColorHint="@color/green"
+            android:textColorLink="@color/green"
+            app:layout_constraintStart_toEndOf="@+id/titleLabel"
+            app:layout_constraintTop_toBottomOf="@+id/addLocationLabel" />
+
+        <Button
+            android:id="@+id/addLocationButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+
+            android:layout_marginTop="20dp"
+            android:width="200dp"
+            android:height="50dp"
+            android:background="@drawable/button_green"
+            android:fontFamily="sans-serif-light"
+            android:text="Add Location"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="@+id/locationButton"
+            app:layout_constraintTop_toBottomOf="@+id/locationButton" />
+
+        <Button
+            android:id="@+id/CancelButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:width="200dp"
+            android:height="50dp"
+            android:background="@drawable/button_red"
+            android:fontFamily="sans-serif-light"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/zxing_status_text"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/addLocationButton"
+            app:layout_constraintStart_toEndOf="@+id/addLocationButton"
+            app:layout_constraintTop_toTopOf="@+id/addLocationButton"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Title"
+            android:textColor="@color/zxing_status_text"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="@+id/addLocationLabel"
+            app:layout_constraintTop_toTopOf="@+id/titleEditText" />
+
+        <TextView
+            android:id="@+id/availabilityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Availability"
+            android:textColor="@color/zxing_status_text"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="@+id/titleLabel"
+            app:layout_constraintTop_toBottomOf="@+id/titleLabel" />
+
+        <Switch
+            android:id="@+id/availabilitySwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+
+            android:checked="true"
+            android:theme="@style/SwitchTheme"
+            app:layout_constraintBottom_toBottomOf="@+id/availabilityLabel"
+            app:layout_constraintStart_toStartOf="@+id/titleEditText"
+            app:layout_constraintTop_toTopOf="@+id/availabilityLabel" />
+
+
+        <TextView
+            android:id="@+id/availabilityLabelSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="available"
+            android:textColor="@color/zxing_status_text"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/availabilitySwitch"
+            app:layout_constraintStart_toEndOf="@+id/availabilitySwitch"
+            app:layout_constraintTop_toTopOf="@+id/availabilitySwitch" />
+
+
+        <Button
+            android:id="@+id/locationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/button_green"
+            android:fontFamily="sans-serif-light"
+            android:padding="15dp"
+            android:text="Save Location"
+            android:textColor="@color/zxing_status_text"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/availabilitySwitch"
+            app:layout_constraintTop_toBottomOf="@+id/availabilitySwitch" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

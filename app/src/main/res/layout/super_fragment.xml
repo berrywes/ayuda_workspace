@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:focusable="true"
+    android:visibility="visible"
+    tools:visibility="visible">
+
+
+    <TextView
+        android:id="@+id/promptActivationLabel"
+        android:layout_width="1076dp"
+        android:layout_height="322dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="8dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-light"
+        android:text="Here for a meeting? I can help"
+
+        android:textColor="@android:color/background_light"
+        android:textSize="120sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonActivate"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="600dp"
+        android:layout_height="80dp"
+
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="44dp"
+        android:width="200dp"
+        android:height="50dp"
+        android:background="@drawable/button_green"
+        android:fontFamily="sans-serif"
+        android:text="Activate"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="35dp"
+        android:topLeftRadius="0dp"
+        android:topRightRadius="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promptActivationLabel"
+        app:layout_constraintVertical_bias="0.121" />
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:translationZ="1dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/zxing_status_text"
+            android:indeterminateTintMode="src_atop" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:translationZ="2dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:layout_marginTop="0sp"
+
+            android:translationZ="1dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:reverseLayout="true"
+            tools:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_weight="3"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone">
+
+        <com.example.berry.ayuda_workplace.WaveView
+            android:id="@+id/superWaveview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+        </com.example.berry.ayuda_workplace.WaveView>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/keyboardButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+
+        android:background="@drawable/button_keyboard"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promptActivationLabel"
+        app:layout_constraintVertical_bias="0.998"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+
+        android:fontFamily="sans-serif-light"
+        android:text="Enter password"
+        android:textColor="@android:color/background_light"
+        android:textSize="60sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/passwordEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/incorrectLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-light"
+        android:text="Incorrect password"
+
+        android:textColor="#FF0000"
+        android:textSize="40sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
+        tools:visibility="gone" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="750dp"
+        android:layout_height="70dp"
+
+        android:layout_marginBottom="508dp"
+        android:background="@drawable/edittext_bottom_line"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:drawablePadding="5dp"
+
+        android:fontFamily="sans-serif-light"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColor="#6ae665"
+        android:textColorHint="@color/zxing_status_text"
+        android:textSize="32sp"
+        android:translationZ="1dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/OkButton"
+        app:layout_constraintStart_toStartOf="@+id/passwordLabel"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/passwordButton"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="52dp"
+        android:background="@drawable/button_green"
+        android:fontFamily="sans-serif-light"
+        android:text="Enter"
+        android:textColor="@color/zxing_status_text"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordEditText"
+        app:layout_constraintStart_toEndOf="@+id/passwordEditText"
+        app:layout_constraintTop_toTopOf="@+id/passwordEditText"
+        app:layout_constraintVertical_bias="0.514"
+        tools:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/clearButton"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+
+        android:background="@null"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_clear_grey" />
+
+    <ImageButton
+        android:id="@+id/passwordPromptButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
+        android:background="@null"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_fingerprint_dark_50dp"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/floorPlanImage"
+        android:layout_width="600dp"
+        android:layout_height="361dp"
+        android:layout_marginEnd="68dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promptNavigationLabel"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/promptNavigationLabel"
+        android:layout_width="1100dp"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+
+        android:fontFamily="sans-serif-light"
+        android:text="Are you sure you want to start guidance?"
+        android:textColor="@android:color/background_light"
+        android:textSize="60sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/confirmationLabel"
+        app:layout_constraintTop_toBottomOf="@+id/confirmationLabel"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/confirmationLabel"
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="112dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-light"
+        android:text="Confirmation"
+
+        android:textColor="@color/green"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/floorPlanImage"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/welcomeLabel"
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-light"
+
+        android:text="Welcome"
+        android:textColor="@color/green"
+        android:textSize="34sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/promptActivationLabel"
+        app:layout_constraintStart_toStartOf="@+id/promptActivationLabel"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tenantTitleLabel"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:focusable="true"
+
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-light"
+        android:text="tenant title"
+        android:textColor="@color/lightgrey"
+        android:textSize="35sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/promptNavigationLabel"
+        app:layout_constraintTop_toBottomOf="@+id/promptNavigationLabel"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tenantAvailabilityLabel"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:focusable="true"
+
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-light"
+        android:text="tenant availability"
+        android:textColor="@color/lightgrey"
+        android:textSize="35sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/tenantTitleLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tenantTitleLabel"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/clearRedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:background="@drawable/button_clear_red"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/checkButton"
+        app:layout_constraintStart_toEndOf="@+id/checkButton"
+        app:layout_constraintTop_toTopOf="@+id/checkButton"
+        app:layout_constraintVertical_bias="1.0"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/checkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/button_check"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tenantAvailabilityLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tenantAvailabilityLabel"
+        app:layout_constraintVertical_bias="0.457"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="500dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_grey"
+        android:fontFamily="sans-serif-light"
+        android:text="Cancel Guidance"
+        android:textColor="@color/zxing_status_text"
+        android:textSize="36sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/sorryTextView"
+        android:layout_width="1000sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="164dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Sorry, an error occured."
+        android:textAlignment="center"
+        android:textColor="@color/zxing_status_text"
+        android:textSize="50sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordButton"
+        app:layout_constraintVertical_bias="0.296"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/differentLocationTextView"
+        android:layout_width="1000sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/zxing_status_text"
+        android:textSize="50sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/OkButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sorryTextView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/noResultsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="460dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Your search did not match any items"
+        android:textColor="@color/zxing_status_text"
+        android:textSize="40sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/OkButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/differentLocationTextView"
+        app:layout_constraintVertical_bias="1.0"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/OkButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="600dp"
+        android:layout_height="80dp"
+
+        android:layout_marginBottom="184dp"
+        android:width="200dp"
+        android:height="50dp"
+        android:background="@drawable/button_green"
+        android:fontFamily="sans-serif"
+        android:text="OK"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="35dp"
+        android:topLeftRadius="0dp"
+        android:topRightRadius="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/cancelButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/exitButton1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/exitButton2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/chargingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:text="Charging"
+        android:textColor="@color/green"
+        android:textSize="150sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
+
+
+</android.support.constraint.ConstraintLayout>

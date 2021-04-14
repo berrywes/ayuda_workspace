@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+
+
+        <TextView
+            android:id="@+id/welcomeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Welcome"
+            android:textColor="@android:color/background_light"
+            android:textSize="70sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/visitorModeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="28dp"
+            android:background="@null"
+            app:layout_constraintEnd_toStartOf="@+id/welcomeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeLabel"
+            app:srcCompat="@drawable/button_visitor_mode" />
+
+        <Button
+            android:id="@+id/visitorModeButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="20dp"
+            android:width="200dp"
+            android:height="50dp"
+            android:background="@drawable/button_green"
+            android:fontFamily="sans-serif"
+            android:text="Activate Visitor Mode"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:topLeftRadius="0dp"
+            android:topRightRadius="0dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/visitorModeImage"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="@+id/visitorModeImage"
+            app:layout_constraintTop_toBottomOf="@+id/visitorModeImage" />
+
+        <ImageButton
+            android:id="@+id/manageLocationsImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@null"
+            app:layout_constraintEnd_toEndOf="@+id/manageSettingsImage"
+            app:layout_constraintTop_toTopOf="@+id/manageAreasImage"
+            app:srcCompat="@drawable/button_manage_locations" />
+
+        <ImageButton
+            android:id="@+id/manageCallNumSectionsImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="344dp"
+            android:background="@null"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/manageLocationsImage"
+            app:layout_constraintHorizontal_bias="0.528"
+            app:layout_constraintStart_toEndOf="@+id/manageAreasImage"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeLabel"
+            app:srcCompat="@drawable/button_manage_call_num_sections"
+            tools:visibility="gone" />
+
+        <Button
+            android:id="@+id/manageLocationsButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="32dp"
+            android:width="200dp"
+            android:height="50dp"
+            android:background="@drawable/button_green"
+            android:fontFamily="sans-serif"
+            android:text="Manage Locations"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:topLeftRadius="0dp"
+            android:topRightRadius="0dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/manageLocationsImage"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/manageLocationsImage"
+            app:layout_constraintTop_toBottomOf="@+id/manageLocationsImage" />
+
+        <Button
+            android:id="@+id/manageCallNumSectionsButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="32dp"
+            android:width="200dp"
+            android:height="50dp"
+            android:background="@drawable/button_green"
+            android:fontFamily="sans-serif"
+            android:text="Manage Call Number Sections"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:topLeftRadius="0dp"
+            android:topRightRadius="0dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/manageCallNumSectionsImage"
+            app:layout_constraintStart_toStartOf="@+id/manageCallNumSectionsImage"
+            app:layout_constraintTop_toBottomOf="@+id/manageCallNumSectionsImage"
+            tools:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/manageSettingsImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:background="@null"
+            app:layout_constraintStart_toEndOf="@+id/welcomeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeLabel"
+            app:srcCompat="@drawable/button_manage_settings" />
+
+        <Button
+            android:id="@+id/manageSettingsButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="20dp"
+            android:width="200dp"
+            android:height="50dp"
+            android:background="@drawable/button_green"
+            android:fontFamily="sans-serif"
+            android:text="Manage Settings"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:topLeftRadius="0dp"
+            android:topRightRadius="0dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/manageSettingsImage"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/manageSettingsImage"
+            app:layout_constraintTop_toBottomOf="@+id/manageSettingsImage" />
+
+        <ImageButton
+            android:id="@+id/manageAreasImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="92dp"
+            android:background="@null"
+            app:layout_constraintStart_toStartOf="@+id/visitorModeImage"
+            app:layout_constraintTop_toBottomOf="@+id/visitorModeButton"
+            app:srcCompat="@drawable/button_manage_areas" />
+
+        <Button
+            android:id="@+id/manageAreasButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="32dp"
+            android:width="200dp"
+            android:height="50dp"
+            android:background="@drawable/button_green"
+            android:fontFamily="sans-serif"
+            android:text="Manage Areas"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:topLeftRadius="0dp"
+            android:topRightRadius="0dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/manageAreasImage"
+            app:layout_constraintStart_toStartOf="@+id/manageAreasImage"
+            app:layout_constraintTop_toBottomOf="@+id/manageAreasImage" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.widget.RelativeLayout>
